@@ -1,7 +1,7 @@
 export const privacyPolicies = {
   enandi: {
     companyName: "Enandi",
-    website: "https://enandi.com",
+    website: "https://enandi.elvatech.in",
     supportEmail: "support@enandi.com",
       logo: "/logos/Enandi.png",
 
