@@ -26,12 +26,12 @@ function NotFound() {
           <p className="mt-3 text-slate-400 font-semibold max-w-md">
             The page you are looking for does not exist or may have been moved.
           </p>
-          <Link
+          {/* <Link
             to="/"
             className="inline-flex mt-8 px-8 py-4 rounded-2xl bg-[#1e293b] text-white font-black text-xs uppercase tracking-widest hover:bg-[#4b6f9e] transition-all shadow-xl"
           >
             Hub sign-in
-          </Link>
+          </Link> */}
         </div>
       </div>
 
