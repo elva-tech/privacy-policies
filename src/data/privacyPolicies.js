@@ -3,7 +3,7 @@ enandi: {
   companyName: "Enandi",
   website: "https://enandi.elvatech.in",
   supportEmail: "support@enandi.com",
-  logo: "/logos/Enandi.png",
+  logo: "/logos/enandi_logo.png",
 
   sections: [
     {
@@ -169,6 +169,61 @@ puma: {
       title: "Contact Us",
       content:
         "For privacy-related questions, requests, or concerns regarding PUMA services, users may contact the appropriate support or privacy team using the contact information available on official PUMA platforms.",
+    },
+  ],
+},
+
+"venkatesh-traders": {
+  companyName: "Venkatesh Traders",
+  website: "",
+  supportEmail: "support@roxufinancial.in",
+  phone: "+91 98254 56781",
+  supportHours: "Monday to Saturday, 9:30 AM – 6:30 PM",
+  address: "Unit 502, Raheja Platinum, Off Andheri-Kurla Road, Marol, Andheri East, Mumbai, Maharashtra 400059",
+  lastUpdated: "5 September 2026",
+  logo: "/logos/venkatesh-traders.png",
+
+  sections: [
+    {
+      title: "Scope",
+      content:
+        "This Privacy Policy explains how Venkatesh Traders (serviced under Roxu Financial) processes personal data when you use the Investor App and related support channels.",
+    },
+
+    {
+      title: "Data we collect",
+      content:
+        "We collect information you provide and data generated through App use:\n• Identity & contact: name, mobile, email, date of birth, address, city, state, PIN\n• KYC identifiers: Aadhaar and PAN numbers as submitted for compliance\n• Banking: account holder name, account number, IFSC, bank name, account type\n• Nominee: name, relationship, Aadhaar\n• Investment & withdrawal records, referral codes, and in-app notifications\n• Technical logs needed for security, fraud prevention, and service reliability",
+    },
+
+    {
+      title: "Why we use your data",
+      content:
+        "We process data to:\n• Create and authenticate your account (including OTP)\n• Process fund requests, interest accrual, TDS display, and withdrawals\n• Verify bank ownership for payouts and prevent misuse\n• Send service notifications for approved or rejected requests\n• Provide customer support and resolve disputes\n• Meet legal, audit, and record-keeping obligations",
+    },
+
+    {
+      title: "Sharing",
+      content:
+        "We do not sell your personal data. We may share limited data with:\n• Authorised operations staff via the admin portal for review and settlement\n• Banking / payment partners strictly for payout execution\n• OTP and infrastructure providers under confidentiality controls\n• Regulators or courts when required by law",
+    },
+
+    {
+      title: "Retention & security",
+      content:
+        "Account and transaction records are retained for as long as your relationship continues and thereafter as required for tax, dispute, and regulatory purposes. We apply access controls, encryption and role-based admin permissions. No method of transmission or storage is perfectly secure; please use a strong password and protect your device.",
+    },
+
+    {
+      title: "Your choices",
+      content:
+        "You may update profile and bank details in the App where available, request support for corrections, and change your password after mobile OTP verification. You may ask about access or deletion subject to legal retention needs.",
+    },
+
+    {
+      title: "Contact",
+      content:
+        "For questions about this Privacy Policy or your personal data, contact Venkatesh Traders using the customer support details on this page.",
     },
   ],
 },

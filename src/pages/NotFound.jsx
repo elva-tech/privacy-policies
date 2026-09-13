@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import { NOT_FOUND_DOCUMENT_TITLE } from '../constants/documentTitle';
 import { restoreDefaultFavicon } from '../utils/favicon';
