@@ -24,7 +24,10 @@ function HubLogin({ onSuccess }) {
       setError('Invalid username or password.');
       return;
     }
-    setHubAuthenticated(true);
+    setHubAuthenticated(true, {
+      username: username.trim(),
+      password,
+    });
     onSuccess();
   }
 

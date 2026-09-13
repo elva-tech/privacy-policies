@@ -60,6 +60,15 @@ function Home() {
               Select a brand to open its public privacy policy. These links are not shown on individual policy pages.
             </p>
 
+            <div className="mt-8 flex justify-center">
+              <Link
+                to="/add-business"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#1e293b] text-white text-[11px] font-black uppercase tracking-widest hover:bg-[#4b6f9e] transition-colors shadow-lg"
+              >
+                + Add New Business
+              </Link>
+            </div>
+
             {policies.length > 0 ? (
               <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
                 {policies.map(({ slug, companyName, logo }) => (

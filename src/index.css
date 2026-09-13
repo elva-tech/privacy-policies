@@ -10,3 +10,53 @@ body {
   background: #f8fafc;
   color: #0f172a;
 }
+
+.policy-editor-content h2,
+.policy-content h2 {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #1e293b;
+  margin: 1.5rem 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+}
+
+.policy-editor-content h3,
+.policy-content h3 {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.policy-editor-content p,
+.policy-content p {
+  margin: 0.75rem 0;
+}
+
+.policy-editor-content ul,
+.policy-content ul,
+.policy-editor-content ol,
+.policy-content ol {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+}
+
+.policy-editor-content li,
+.policy-content li {
+  margin: 0.35rem 0;
+}
+
+.policy-editor-content a,
+.policy-content a {
+  color: #4b6f9e;
+  text-decoration: underline;
+}
+
+.policy-editor-content .is-editor-empty:first-child::before {
+  color: #94a3b8;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
