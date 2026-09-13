@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import DOMPurify from 'dompurify';
 import { privacyPolicies } from '../data/privacyPolicies';
+import { isHtmlContent } from '../utils/policyContent';
 import PolicyPageHeader from '../components/PolicyPageHeader';
 import Footer from '../components/Footer';
 import NotFound from './NotFound';
@@ -9,6 +11,23 @@ import {
   HUB_DOCUMENT_TITLE,
   NOT_FOUND_DOCUMENT_TITLE,
 } from '../constants/documentTitle';
+
+function SectionContent({ content }) {
+  if (isHtmlContent(content)) {
+    return (
+      <div
+        className="policy-content text-slate-600 leading-8 font-semibold italic"
+        dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content) }}
+      />
+    );
+  }
+
+  return (
+    <p className="text-slate-600 leading-8 font-semibold italic whitespace-pre-line">
+      {content}
+    </p>
+  );
+}
 
 function PolicyPage() {
   const { slug } = useParams();
@@ -59,39 +78,41 @@ function PolicyPage() {
             </p>
           </div>
 
-          <div className="mb-12 bg-blue-50 border border-blue-100 rounded-2xl p-5">
-            <p className="text-[10px] font-black text-[#4b6f9e] uppercase tracking-widest mb-2">
-              Customer Support
-            </p>
+          {policy.supportEmail ? (
+            <div className="mb-12 bg-blue-50 border border-blue-100 rounded-2xl p-5">
+              <p className="text-[10px] font-black text-[#4b6f9e] uppercase tracking-widest mb-2">
+                Customer Support
+              </p>
 
-            <a
-              href={`mailto:${policy.supportEmail}`}
-              className="text-lg font-black text-[#1e293b] hover:text-[#4b6f9e] transition-colors break-all"
-            >
-              {policy.supportEmail}
-            </a>
-
-            {policy.phone ? (
               <a
-                href={`tel:${policy.phone.replace(/\s/g, '')}`}
-                className="mt-3 block text-base font-black text-[#1e293b] hover:text-[#4b6f9e] transition-colors"
+                href={`mailto:${policy.supportEmail}`}
+                className="text-lg font-black text-[#1e293b] hover:text-[#4b6f9e] transition-colors break-all"
               >
-                {policy.phone}
+                {policy.supportEmail}
               </a>
-            ) : null}
 
-            {policy.supportHours ? (
-              <p className="mt-3 text-sm font-semibold italic text-slate-600">
-                {policy.supportHours}
-              </p>
-            ) : null}
+              {policy.phone ? (
+                <a
+                  href={`tel:${policy.phone.replace(/\s/g, '')}`}
+                  className="mt-3 block text-base font-black text-[#1e293b] hover:text-[#4b6f9e] transition-colors"
+                >
+                  {policy.phone}
+                </a>
+              ) : null}
 
-            {policy.address ? (
-              <p className="mt-3 text-sm font-semibold italic text-slate-600 leading-7">
-                {policy.address}
-              </p>
-            ) : null}
-          </div>
+              {policy.supportHours ? (
+                <p className="mt-3 text-sm font-semibold italic text-slate-600">
+                  {policy.supportHours}
+                </p>
+              ) : null}
+
+              {policy.address ? (
+                <p className="mt-3 text-sm font-semibold italic text-slate-600 leading-7">
+                  {policy.address}
+                </p>
+              ) : null}
+            </div>
+          ) : null}
 
           <div className="space-y-10">
             {policy.sections.map((section, index) => (
@@ -100,9 +121,7 @@ function PolicyPage() {
                   {section.title}
                 </h2>
 
-                <p className="text-slate-600 leading-8 font-semibold italic whitespace-pre-line">
-                  {section.content}
-                </p>
+                <SectionContent content={section.content} />
               </div>
             ))}
           </div>

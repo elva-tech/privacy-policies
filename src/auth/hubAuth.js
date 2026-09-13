@@ -1,4 +1,6 @@
 const STORAGE_KEY = 'elva_hub_authenticated';
+const USERNAME_KEY = 'elva_hub_username';
+const PASSWORD_KEY = 'elva_hub_password';
 
 export function isHubAuthenticated() {
   try {
@@ -8,10 +10,32 @@ export function isHubAuthenticated() {
   }
 }
 
-export function setHubAuthenticated(value) {
+export function getHubCredentials() {
   try {
-    if (value) sessionStorage.setItem(STORAGE_KEY, 'true');
-    else sessionStorage.removeItem(STORAGE_KEY);
+    const username = sessionStorage.getItem(USERNAME_KEY);
+    const password = sessionStorage.getItem(PASSWORD_KEY);
+    if (!username || !password) {
+      return null;
+    }
+    return { username, password };
+  } catch {
+    return null;
+  }
+}
+
+export function setHubAuthenticated(value, credentials) {
+  try {
+    if (value) {
+      sessionStorage.setItem(STORAGE_KEY, 'true');
+      if (credentials?.username && credentials?.password) {
+        sessionStorage.setItem(USERNAME_KEY, credentials.username);
+        sessionStorage.setItem(PASSWORD_KEY, credentials.password);
+      }
+    } else {
+      sessionStorage.removeItem(STORAGE_KEY);
+      sessionStorage.removeItem(USERNAME_KEY);
+      sessionStorage.removeItem(PASSWORD_KEY);
+    }
   } catch {
     /* ignore */
   }

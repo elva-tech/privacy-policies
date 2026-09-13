@@ -227,6 +227,38 @@ puma: {
     },
   ],
 },
+
+"elva-sales": {
+  companyName: "ELVA SALES",
+  website: "",
+  supportEmail: "",
+  lastUpdated: "13 September 2026",
+  logo: "/logos/elva-sales.png",
+
+  sections: [
+    {
+      title: "Overview",
+      content:
+        "<p><strong>ELVA SALES</strong></p><p><em>Privacy Policy</em></p><ol><li><p>Coming soon...</p></li></ol>",
+    },
+  ],
+},
+
+"demo-business": {
+  companyName: "Demo Business",
+  website: "",
+  supportEmail: "",
+  lastUpdated: "13 September 2026",
+  logo: "/logos/demo-business.png",
+
+  sections: [
+    {
+      title: "Overview",
+      content:
+        "<p><strong>Demo Business</strong></p><p>This is Demo Business and Privacy Policy is coming soon.</p>",
+    },
+  ],
+},
 };
 
 export function listPrivacyPolicies() {
