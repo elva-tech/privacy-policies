@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate, useParams } from 'react-router-dom';
 import Home from './pages/Home';
+import AddBusiness from './pages/AddBusiness';
 import PolicyPage from './pages/PolicyPage';
 import NotFound from './pages/NotFound';
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/add-business" element={<AddBusiness />} />
       <Route path="/404" element={<NotFound />} />
       <Route
         path="/privacy-policy/:slug"

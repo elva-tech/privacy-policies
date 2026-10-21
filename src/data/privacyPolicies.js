@@ -176,10 +176,10 @@ puma: {
 "venkatesh-traders": {
   companyName: "Venkatesh Traders",
   website: "",
-  supportEmail: "support@roxufinancial.in",
-  phone: "+91 98254 56781",
+  supportEmail: "venkateshtradersc@gmail.com",
+  phone: "+91 77957 07027",
   supportHours: "Monday to Saturday, 9:30 AM – 6:30 PM",
-  address: "Unit 502, Raheja Platinum, Off Andheri-Kurla Road, Marol, Andheri East, Mumbai, Maharashtra 400059",
+  address: "Venkatesh Traders, Ashok Nagar, Sanjay Gandhi Nagar, Ballari, Karnataka 583103",
   lastUpdated: "5 September 2026",
   logo: "/logos/venkatesh-traders.png",
 
