@@ -3,7 +3,7 @@ function Footer() {
     <footer className="border-t border-slate-100 bg-white py-6 px-6 mt-16">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest text-center md:text-left">
-          © {new Date().getFullYear()} ELVA Technologies. All rights reserved.
+          © {new Date().getFullYear()} ELVA Tech. All rights reserved.
         </p>
         <a
           href="https://www.elvatech.in/"
